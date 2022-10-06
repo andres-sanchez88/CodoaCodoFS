@@ -1,0 +1,200 @@
+.body {
+    display: grid;
+    grid-template: 250px 1fr 1fr 1fr / 1fr 2fr 2fr 1fr;
+    grid-template-areas:
+    'header header header header'
+    'main main main main'
+    'main main main main'
+    'main main main main'
+    'footer footer footer footer'
+    ;
+    background-image: url("backgrounds-Certifi-KT_fix1.gif");
+    background-position: center; /* Para centrar la imagen*/
+    background-size: cover; /* Ajusta el tamaño al contenedor */
+    background-color: #D9D9D9; /* Fondo por si falla la imagen */
+    /* Margenes para que ajuste bien el footer */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+   /*  max-height: 200px; */
+}
+
+.banner {
+    color: #F1F1F1;
+   /*  background-color: #052545; */
+    flex: 90%;
+    /* Centrado de Texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 300px; */
+}
+
+.banner_text {
+    text-align: center;
+}
+
+navbar {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bolder;
+    color: #282A35;
+    background-color: #2DC01F;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    /* flex: 10%; */
+/* FLEX PARA CENTRAR LAS OPCIONES DE NAVEGACION */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+navbar div a {
+    padding: 0.25em 0em 0.25em 0em;
+    text-decoration: none;
+    color: #282A35;
+}
+
+navbar .home, .burger {
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    margin: 5px 5px;
+}
+
+navbar .burger {
+    width: 200px;
+}
+
+navbar .home {
+    text-align: center;
+    flex: 1;
+}
+
+navbar .navbar_links {
+    display: flex;
+    width: 200px;
+}
+
+navbar .navbar_links a {
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    border: 2px solid #F1F1F1;
+    margin: 5px 5px;
+    background-color: #2DC01F; /* Green */
+    border-radius: 10px;
+    color: #F1F1F1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /* transition: background-color .5s; */
+}
+
+navbar .navbar_links a:hover {
+    border: 2px solid #2DC01F;
+    color: #2DC01F;
+    background-color: #F1F1F1;
+}
+aside {
+    grid-area: aside;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+    color: #F1F1F1;
+    background-color: #282A35;
+    flex: 15%;
+    border-radius: 10px;
+}
+
+main {
+    grid-area: main;
+    /* FLEX PARA DIVIDIR EL MAIN EN EL MENU Y LOS ARTICULOS */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: stretch;
+    /* Transparencia con el Footer */
+    z-index: 1;
+}
+
+footer {
+    grid-area: footer;
+    font-family: 'Roboto Flex', sans-serif;
+    color: #D9D9D9;
+    background-color: #282A35;
+    width: 100%;
+
+}
+
+.footer_fade {
+    font-family: 'Roboto Flex', sans-serif;
+    color: #D9D9D9;
+    background-color: #282A35;
+    background: linear-gradient(rgba(40, 42, 53, 0),rgba(40, 42, 53, 0.5), rgba(40, 42, 53, 0.75), rgba(40, 42, 53, 1) );
+
+    /* Transparencia */
+    margin-top: -100px;
+    height: 105px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+
+.footer_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot_flex {
+    padding: 10px 0px 10px 0px;
+    color: #F1F1F1;
+}
+
+
+section {
+    /* FLEX PARA ORDENAR VERTICAL LOS ARTICULOS */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: stretch;
+    flex: 100%;
+}
+
+article {
+    font-family: 'Inter', sans-serif;
+    background-color: #F1F1F1;
+
+    margin: 20px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+    box-shadow: #282A35 10px;
+}
+
+
+
+/* ESTILO DE TEXTOS */
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+
+h4 {
+    font-family: 'Whitney', Tahoma, Arial, sans-serif;
+}
+
+span {
+    font-family: 'consolas', sans-serif;
+    /* font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace; */
+    color: #2DD61F;
+    background-color: #282A35;
+}
+
+.banner_text {
+    text-shadow: #282A35 10px;
+}
