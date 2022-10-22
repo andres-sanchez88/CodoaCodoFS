@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS + Importacion de Fonts e Iconos -->
+    <link rel="stylesheet" href="css-certifica-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter|Be+Vietnam+Pro|Roboto+Flex">
+    <script src="https://kit.fontawesome.com/4000ded7fa.js" crossorigin="anonymous"></script>
+    <!-- Titulo y Logo -->
+    <title>Certifica-T</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="body">
+    <header class="header">
+        <navbar class="navbar_r" id="navbar_main">
+            <div class="navbar_links">
+                <a href=armadocv.html>ARMADO CV</a>
+                <a href=tests.html>TESTS</a>
+            </div>
+            <div class="home">
+                <a href=index.html>NEWS</a>
+            </div>
+            <div class="burger">
+                <!-- <a href="javascript:void(0);" class="menu_icon" onclick="menuBurger()">&#9776;</a> -->
+                <a href="javascript:void(0);" class="menu_icon" onclick="menuBurger()">
+                  <div id="burger_icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </a>
+            </div>
+         </navbar>
+        <div class="banner">
+            <div class="banner_text">
+                <h1>Certifica-T</h1>
+                <h4>Demostra lo que sabes</h4>
+            </div>
+        </div>
+    </header>
+     <!-- Menu contextual que se ajusta a la funcion en la que se trabaja -->
+    <aside class="aside" id="burger_main">
+        <div class="navbar_links_r" >
+            <a href=armadocv.html>ARMADO CV</a>
+            <a href=tests.html>TESTS</a>
+         </div>
+         <div class="context">
+            <a href=armadocv.html>HTML</a>
+            <a href=armadocv.html>CSS</a>
+            <a href=armadocv.html>JavaScript</a>
+        </div> 
+    </aside>
+    <!-- El MAIN varia según la funcion que se este utilizando-->
+    <main class="main">
+        <!-- Seccion de novedades de la pagina y guia -->
+        <section class="section">
+            <!-- Actividad de TEST, hacer un formulario con preguntas y respuestas o un juego con js -->
+            <article class="contactform">
+                <form id="formulario" target="_blank"  action="https://formspree.io/f/xpznjdoa" method="POST">
+                    <div>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+                    </div>
+                    <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div>
+                    <input type="checkbox" name="cursoscheck" id="html" value="HTML">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" name="cursoscheck" id="css" value="css">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" name="cursoscheck" id="js" value="js">
+                    <label for="js">JavaScript</label>
+                    </div>
+                     <div>
+                        <input type="radio" name="cursos" id="html" value="HTML">
+                        <label for="html">HTML</label>
+                        <input type="radio" name="cursos" id="css" value="css">
+                        <label for="css">CSS</label>
+                        <input type="radio" name="cursos" id="js" value="js">
+                        <label for="js">JavaScript</label>
+                    </div>
+                    <div>
+                        <h3>Lenguaje:</h3>
+                        <label for="lenguajes">lenguaje</label>
+                        <input type="select">
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+    <!-- Footer con informacion de web -->
+    <footer class="footer">
+        <div class="footer_fade">
+        </div>
+        <div class="footer_container">
+            <div class="foot_flex">
+            <h4 class="foot_title">PARTNERS</h4>
+            <ul class="simple_list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            </div>
+            <div class="foot_flex">
+            <h4 class="foot_title">LEGALES</h4>
+            <ul class="simple_list">
+                <li>Terminos de Uso</li>
+                <li>Privacidad</li>
+                <li>Politica de cookies</li>
+            </ul>
+            </div>
+            <div class="foot_flex">
+            <h4 class="foot_title">CONTACTO</h4>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-square-envelope"></i></span><a href="contacto.html">Mail</a></li>
+                <li><span class="fa-li"><i class="fa-brands fa-square-twitter"></i></span><a href="https://twitter.com/certificateok">Twitter</a></li>
+                <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span><a href="https://www.linkedin.com/in/andres-sanchez88/">Linkedin</a></li>
+                <li><span class="fa-li"><i class="fa-brands fa-square-github"></i></span><a href="https://github.com/andres-sanchez88">Github</a></li>
+            </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function menuBurger() {
+          var burger = document.getElementById("burger_main");
+          var icon = document.getElementById("burger_icon");
+          if (burger.className === "aside") {
+            burger.className += " menu_aside";
+            icon.className += " open";
+          } else {
+            burger.className = "aside";
+            icon.className += "burger_icon";
+          }
+        }
+    </script>
+    <script src="contact.js"></script>
+</body>
+</html>

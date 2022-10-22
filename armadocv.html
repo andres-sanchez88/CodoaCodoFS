@@ -6,24 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS + Importacion de Fonts e Iconos -->
-    <link rel="stylesheet" href="css-certifica-tests-cv.css">
+    <link rel="stylesheet" href="css-certifica-home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter|Be+Vietnam+Pro|Roboto+Flex">
+    <script src="https://kit.fontawesome.com/4000ded7fa.js" crossorigin="anonymous"></script>
     <!-- Titulo y Logo -->
     <title>Certifica-T</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body class="body">
     <header class="header">
-        <navbar>
-            <div class="burger">
-                <a>&#9776;</a>
+        <navbar class="navbar_r" id="navbar_main">
+            <div class="navbar_links">
+                <a href=armadocv.html>ARMADO CV</a>
+                <a href=tests.html>TESTS</a>
             </div>
             <div class="home">
                 <a href=index.html>NEWS</a>
             </div>
-            <div class="navbar_links">
-                <a href=armadocv.html>ARMADO CV</a>
-                <a href=tests.html>TESTS</a>
+            <div class="burger">
+                <!-- <a href="javascript:void(0);" class="menu_icon" onclick="menuBurger()">&#9776;</a> -->
+                <a href="javascript:void(0);" class="menu_icon" onclick="menuBurger()">
+                  <div id="burger_icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </a>
             </div>
          </navbar>
         <div class="banner">
@@ -33,6 +42,18 @@
             </div>
         </div>
     </header>
+     <!-- Menu contextual que se ajusta a la funcion en la que se trabaja -->
+    <aside class="aside" id="burger_main">
+        <div class="navbar_links_r" >
+            <a href=armadocv.html>ARMADO CV</a>
+            <a href=tests.html>TESTS</a>
+         </div>
+         <div class="context">
+            <a href=armadocv.html>HTML</a>
+            <a href=armadocv.html>CSS</a>
+            <a href=armadocv.html>JavaScript</a>
+        </div> 
+    </aside>
      <!-- Menu contextual que se ajusta a la funcion en la que se trabaja -->
     <aside class="aside">
           MENU CONTEXTUAL
@@ -71,7 +92,7 @@
         <div class="footer_container">
             <div class="foot_flex">
             <h4 class="foot_title">PARTNERS</h4>
-            <ul>
+            <ul class="simple_list">
                 <li>Item 1</li>
                 <li>Item 2</li>
                 <li>Item 3</li>
@@ -79,7 +100,7 @@
             </div>
             <div class="foot_flex">
             <h4 class="foot_title">LEGALES</h4>
-            <ul>
+            <ul class="simple_list">
                 <li>Terminos de Uso</li>
                 <li>Privacidad</li>
                 <li>Politica de cookies</li>
@@ -87,13 +108,27 @@
             </div>
             <div class="foot_flex">
             <h4 class="foot_title">CONTACTO</h4>
-            <ul>
-                <li>Twitter</li>
-                <li>Linkedin</li>
-                <li>Github</li>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-square-envelope"></i></span><a href="contacto.html">Mail</a></li>
+                <li><span class="fa-li"><i class="fa-brands fa-square-twitter"></i></span><a href="https://twitter.com/certificateok">Twitter</a></li>
+                <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span><a href="https://www.linkedin.com/in/andres-sanchez88/">Linkedin</a></li>
+                <li><span class="fa-li"><i class="fa-brands fa-square-github"></i></span><a href="https://github.com/andres-sanchez88">Github</a></li>
             </ul>
             </div>
         </div>
     </footer>
+    <script>
+        function menuBurger() {
+          var burger = document.getElementById("burger_main");
+          var icon = document.getElementById("burger_icon");
+          if (burger.className === "aside") {
+            burger.className += " menu_aside";
+            icon.className += " open";
+          } else {
+            burger.className = "aside";
+            icon.className += "burger_icon";
+          }
+        }
+    </script>
 </body>
 </html>

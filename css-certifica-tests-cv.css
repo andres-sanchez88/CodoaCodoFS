@@ -3,9 +3,9 @@
     grid-template: 250px 1fr 1fr 1fr / 1fr 2fr 2fr 1fr;
     grid-template-areas:
     'header header header header'
-    'aside main main main'
-    'aside main main main'
-    'aside main main main'
+    'main main main main'
+    'main main main main'
+    'main main main main'
     'footer footer footer footer'
     ;
     background-image: url("backgrounds-Certifi-KT_fix1.gif");
@@ -49,15 +49,44 @@ navbar {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
     width: 100%;
     /* flex: 10%; */
 /* FLEX PARA CENTRAR LAS OPCIONES DE NAVEGACION */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
+
+.navbar_r {
+    overflow: hidden;
+  }
+  
+  .navbar_r a {
+/*     float: right; */
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    /* font-size: 17px; */
+  }
+  
+
+  .navbar_r a:hover {
+    border: 2px solid #2DC01F;
+    color: #2DC01F;
+    background-color: #F1F1F1;
+  }
+  
+  .navbar_r a.active {
+    background-color: #282A35;
+    color: #2DC01F;
+  }
+  
+  
+/*   .navbar_r .menu_icon {
+    display: none;
+  } */
 
 navbar div a {
     padding: 0.25em 0em 0.25em 0em;
@@ -72,6 +101,7 @@ navbar .home, .burger {
 
 navbar .burger {
     width: 200px;
+    text-align: right;
 }
 
 navbar .home {
@@ -82,6 +112,23 @@ navbar .home {
 navbar .navbar_links {
     display: flex;
     width: 200px;
+}
+
+.navbar_links_r {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar_links_r a {
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    border: 2px solid #F1F1F1;
+    margin: 5px 5px;
+    background-color: #2DC01F; /* Green */
+    border-radius: 10px;
+    color: #F1F1F1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 navbar .navbar_links a {
@@ -97,18 +144,49 @@ navbar .navbar_links a {
     /* transition: background-color .5s; */
 }
 
+navbar .burger a {
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    border: 2px solid #F1F1F1;
+    margin: 5px 5px;
+    background-color: #2DC01F; /* Green */
+    border-radius: 10px;
+    color: #F1F1F1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    z-index: 1000;
+    /* transition: background-color .5s; */
+}
+
+.menu_icon {
+    z-index: 1000;
+}
+
 navbar .navbar_links a:hover {
     border: 2px solid #2DC01F;
     color: #2DC01F;
     background-color: #F1F1F1;
 }
+
 aside {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 250px;
     grid-area: aside;
     font-family: Verdana, 'Geneva', Tahoma, sans-serif;
     color: #F1F1F1;
     background-color: #282A35;
-    flex: 15%;
+
     border-radius: 10px;
+    z-index: 10;
+    position: fixed;
+    transform: translateX(250px);
+    padding-top: 100px;
+}
+
+.menu_aside {
+    transform: translateX(0px);
 }
 
 main {
@@ -175,6 +253,14 @@ article {
     box-shadow: #282A35 10px;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.simple_list {
+    padding-left: 0;
+}
 
 
 /* ESTILO DE TEXTOS */
@@ -197,3 +283,47 @@ span {
 .banner_text {
     text-shadow: #282A35 10px;
 }
+
+
+/* Media breakpoints */
+
+/* Extra small devices (600px and down) // Celulares */
+@media only screen and (max-width: 600px) {
+    navbar {
+        background-color: #c0371f;
+    }
+
+
+
+    .navbar_r .navbar_links {visibility: hidden;}
+/*     .navbar_r a.menu_icon {
+      float: right;
+      display: block;
+    } */
+
+/*     .navbar_r.responsive {position: relative;}
+    .navbar_r.responsive .menu_icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    } */
+    .navbar_r.responsive a {
+      float: none;
+      /* display: block; */
+      text-align: left;
+    }
+    }
+
+    .footer_container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+
+/* Large devices (992px and up) // Pcs y Monitores */
+@media only screen and (min-width: 992px) {
+    navbar {
+        background-color: #b01fc0;
+    }
+    }
