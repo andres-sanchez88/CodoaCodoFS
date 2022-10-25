@@ -15,6 +15,7 @@
     /* Margenes para que ajuste bien el footer */
     margin: 0px;
     min-height: 1080px;
+    width: 100%;
 }
 
 header {
@@ -260,17 +261,55 @@ section {
     flex-direction: column;
     justify-content: start;
     align-content: stretch;
+    align-items: center;
     flex: 100%;
+    width: 100%;
+}
+
+iframe {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 article {
     font-family: 'Inter', sans-serif;
     background-color: #F1F1F1;
-
-    margin: 20px;
-    padding: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 1vw 0 1vw;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px #1E1E1E;
+}
+
+.formDiv {
+    padding: 0.25vw 20px 0.25vw 20px;
+    text-align: center;
+}
+
+#buttonDiv {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.formDiv label {
+    padding: 0 20px 0 20px;
+}
+
+.biblio {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.book {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 ul {
@@ -401,6 +440,7 @@ span {
     display: grid;
     place-items: center;
     color: white;
+    background-color: #2DD61F;
     font-size: 3rem;
   
     aspect-ratio: 2/1;
@@ -409,14 +449,10 @@ span {
     scroll-snap-align: start;
   }
   
-  .li_carrusel:nth-child(odd) {
-    background-color: salmon;
+  .li_carrusel button {
+    background-color: #282A35;
+    color: #2DD61F;
   }
-  
-  .li_carrusel:nth-child(even) {
-    background-color: rebeccapurple;
-  }
-  
 
 /* Carrusel full CSS */
 
@@ -482,10 +518,18 @@ span {
 
 /* Extra small devices (620px and down) // Celulares */
 @media only screen and (max-width: 620px) {
-    navbar {
-        background-color: #c0371f;
+    .ul_carrusel {
+        width: auto;
     }
 
+    .footer_fade {
+        display: none;
+    }
+
+    .video_r {
+        width: 280px;
+        height: 157px;
+    }
     .navbar_r .navbar_links {visibility: hidden;}
     .navbar_links a {display: none;}
 /*  .navbar_r a.menu_icon {
@@ -516,7 +560,8 @@ span {
 
 /* Large devices (992px and up) // Pcs y Monitores */
 @media only screen and (min-width: 992px) {
-    navbar {
-        background-color: #b01fc0;
+    .video_r {
+        width: 840px;
+        height: 472px;
     }
     }

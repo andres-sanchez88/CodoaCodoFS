@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS + Importacion de Fonts e Iconos -->
+    <link rel="stylesheet" href="css-certifica-home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter|Be+Vietnam+Pro|Roboto+Flex">
+    <script src="https://kit.fontawesome.com/4000ded7fa.js" crossorigin="anonymous"></script>
+    <!-- Titulo y Logo -->
+    <title>Certifica-T</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="body">
+    <header id="idHeader" class="header">
+    </header>
+     <!-- Menu contextual que se ajusta a la funcion en la que se trabaja -->
+    <aside class="aside" id="burger_main">
+    </aside>
+    <!-- El MAIN varia según la funcion que se este utilizando-->
+    <main class="main">
+        <!-- Seccion de novedades de la pagina y guia -->
+        <section class="section">
+            <!-- Formulario para ingresar experiencias laborales y educacion -->
+            <article>
+                <h1>Selecciona la biblioteca</h1>
+                <div class="biblio">
+                <div class="book">
+                    <i class="fa-brands fa-linux"></i>
+                    <a href="aprendizaje-linux.html" class="linux">
+                    <span>
+                        LINUX
+                    </span>
+                </a>
+                </div>
+                <div class="book">
+                    <i class="fa-solid fa-code"></i>
+                    <a href="aprendizaje-bash.html" class="bash">
+                    <span>
+                        BASH
+                    </span>
+                </a>
+                </div>
+                <div class="book">
+                    <i class="fa-brands fa-docker"></i>
+                    <a href="aprendizaje-docker.html" class="docker">
+                    <span>
+                        DOCKER
+                    </span>
+                </a>
+                </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- Footer con informacion de web -->
+    <footer id="idFooter" class="footer">
+    </footer>
+    <script src="constructor.js"></script>
+    <script>
+        function menuBurger() {
+          var burger = document.getElementById("burger_main");
+          var icon = document.getElementById("burger_icon");
+          if (burger.className === "aside") {
+            burger.className += " menu_aside";
+            icon.className += " open";
+          } else {
+            burger.className = "aside";
+            icon.className += "burger_icon";
+          }
+        }
+    </script>
+</body>
+</html>
