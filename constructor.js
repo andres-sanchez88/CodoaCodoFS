@@ -55,7 +55,7 @@ document.getElementById("idFooter").innerHTML = `
     <ul class="simple_list">
         <li>Terminos de Uso</li>
         <li>Privacidad</li>
-        <li>Politica de cookies</li>
+        <li>Política de cookies</li>
     </ul>
     </div>
     <div class="foot_flex">

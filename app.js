@@ -26,7 +26,7 @@ function reviewQuiz() {
     if (correctAnswerCount > falseAnswerCount) {
         alert("Aprobaste!");
     } else {
-        alert("A seguir estudiando!");
+        alert("A casa!");
     }
 }
 
