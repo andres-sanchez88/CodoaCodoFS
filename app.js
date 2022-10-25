@@ -25,8 +25,10 @@ function gateQuiz(languageSelector) {
 function reviewQuiz() {
     if (correctAnswerCount > falseAnswerCount) {
         alert("Aprobaste!");
+        location.reload();
     } else {
         alert("A casa!");
+        location.reload();
     }
 }
 

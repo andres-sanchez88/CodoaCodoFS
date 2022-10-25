@@ -5,7 +5,7 @@ document.getElementById("idHeader").innerHTML = `
     <a href=tests.html>TESTS</a>
 </div>
 <div class="home">
-    <a href=index.html>NEWS</a>
+    <a class="index" href=index.html>HOME</a>
 </div>
 <div class="burger">
     <a href="javascript:void(0);" class="menu_icon" onclick="menuBurger()">

@@ -92,6 +92,13 @@ navbar div a {
     flex-basis: 34%;
 }
 
+.index {
+    color: #F1F1F1;
+    margin: 5px 5px;
+    background-color: #2DC01F; /* Green */
+}
+
+
 .navbar_links {
     display: flex;
     /* width: 200px; */
@@ -421,6 +428,10 @@ span {
   left: 50%;
 }
 
+#buttonDefinitiveAnswer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 /* Carrousel con scrollbar */
   
   .ul_carrusel {
